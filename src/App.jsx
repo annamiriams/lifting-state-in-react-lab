@@ -28,12 +28,11 @@ const App = () => {
     const [stack, setStack] = useState([]);
 
     // handleAddToBurger function
-    // newIngredient will be the state variable in BurgerStack.jsx i think?
-    // changing function name to match syntax we've been learning
     const handleAddToBurger = (ingredient) => {
         console.log(ingredient);
-        // const burgerStack = [...stack, ingredient];
-        // setStack(burgerStack);
+        // reversing order so first ingredient is on the bottom
+        const burgerStack = [ingredient, ...stack];
+        setStack(burgerStack);
     };
 
     // handleRemoveFromBurger function

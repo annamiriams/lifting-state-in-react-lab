@@ -1,7 +1,6 @@
 // src/components/IngredientList/IngredientList.jsx
 
 const IngredientList = (props) => {
-
     return (
         <div>
             <h3>Available Ingredients</h3>
@@ -9,6 +8,7 @@ const IngredientList = (props) => {
                 {props.availableIngredients.map((ingredient, index) => (
                     <li key={index} style={{ backgroundColor: ingredient.color }}> 
                         {ingredient.name}
+                        <button onClick={() => props.handleAddToBurger(ingredient)}>+</button>
                     </li>
                 ))}
             </ul>

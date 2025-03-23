@@ -26,6 +26,8 @@ const App = () => {
     // initialize new useState variable called stack
     // starting with an empty array so that we can add ingredients from availableIngredients to the stack
     const [stack, setStack] = useState([]);
+    // new state variable to track ing list
+    const [ingredientsList, setIngredientsList] = useState([]);
 
     // handleAddToBurger function
     const handleAddToBurger = (ingredient) => {
@@ -38,8 +40,11 @@ const App = () => {
     // handleRemoveFromBurger function
     const handleRemoveFromBurger = (removedIngredient) => {
         console.log(removedIngredient);
-        // const updatedBurgerStack = burgerStack.filter(ingredient => ingredient.id !== removedIngredient.id);
-        // setStack(updatedBurgerStack);
+        // this is working to remove an ing from stack, but it's not letting you readd the ing from the avail ings
+        // fixed when i added state variable for ing list and set it below
+        const updatedBurgerStack = stack.filter(ingredient => ingredient.name !== removedIngredient.name);
+        setStack(updatedBurgerStack);
+        setIngredientsList(ingredientsList);
     };
 
     return (

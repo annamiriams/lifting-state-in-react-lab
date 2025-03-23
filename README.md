@@ -1,12 +1,9 @@
-# React + Vite
+# Lifting State in React Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Reactville, a constantly evolving virtual metropolis. Let’s build this digital town together, one component at a time.
 
-Currently, two official plugins are available:
+Today, you’re stepping into the Reactville Burger Shop, a favorite local eatery known for its mouth-watering burgers. In this interactive app, users build their dream burger, choosing from various breads, meats, and toppings. But there’s a catch: it’s also a lesson in ‘lifting state’ in React. Get ready to stack ingredients and elevate your React skills!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In this lab, students will create a burger builder app with two main components: an ingredients list and a burger stack. Users will be able to add items from the ingredients list to the burger stack to create the perfect burger.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[GA GitHub lab](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/lifting-state-in-react-lab/canvas-landing-pages/seb.html)

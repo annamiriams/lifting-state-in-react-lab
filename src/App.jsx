@@ -37,10 +37,11 @@ const App = () => {
     };
 
     // handleRemoveFromBurger function
-    // const handleRemoveFromBurger = (removedIngredient) => {
-    //     const updatedBurgerStack = burgerStack.filter(ingredient => ingredient.id !== removedIngredient.id);
-    //     setStack(updatedBurgerStack);
-    // };
+    const handleRemoveFromBurger = (removedIngredient) => {
+        console.log(removedIngredient);
+        // const updatedBurgerStack = burgerStack.filter(ingredient => ingredient.id !== removedIngredient.id);
+        // setStack(updatedBurgerStack);
+    };
 
     return (
         <main>
@@ -51,7 +52,10 @@ const App = () => {
                     availableIngredients={availableIngredients} 
                     handleAddToBurger={handleAddToBurger}
                 />
-                <BurgerStack />
+                <BurgerStack 
+                    stack={stack}
+                    handleRemoveFromBurger={handleRemoveFromBurger}
+                />
             </section>
         </main>
     );

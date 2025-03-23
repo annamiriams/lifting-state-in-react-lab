@@ -27,6 +27,19 @@ const App = () => {
     // starting with an empty array so that we can add ingredients from availableIngredients to the stack
     const [stack, setStack] = useState([]);
 
+    // addToBurger function
+    // newIngredient will be the state variable in BurgerStack.jsx i think?
+    const addToBurger = (newIngredient) => {
+        const burgerStack = [...stack, newIngredient];
+        setStack(burgerStack);
+    };
+
+    // removeFromBurger function
+    // const removeFromBurger = (removedIngredient) => {
+    //     const updatedBurgerStack = burgerStack.filter(ingredient => ingredient.id !== removedIngredient.id);
+    //     setStack(updatedBurgerStack);
+    // };
+
     return (
         <main>
             <h1>Burger Stacker</h1>

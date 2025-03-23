@@ -1,7 +1,7 @@
 // src/App.jsx
 
 import './App.css';
-import IngredientList from './components/IngredientsList/IngredientsList';
+import IngredientList from './components/IngredientList/IngredientList';
 import BurgerStack from './components/BurgerStack/BurgerStack';
 import { useState } from 'react';
 
@@ -32,7 +32,7 @@ const App = () => {
             <h1>Burger Stacker</h1>
             <section>
                 {/* List & Stack components */}
-                <IngredientList />
+                <IngredientList availableIngredients={availableIngredients}/>
                 <BurgerStack />
             </section>
         </main>

@@ -3,6 +3,7 @@
 import './App.css';
 import IngredientList from './components/IngredientsList/IngredientsList';
 import BurgerStack from './components/BurgerStack/BurgerStack';
+import { useState } from 'react';
 
 const App = () => {
     const availableIngredients = [
@@ -21,6 +22,10 @@ const App = () => {
         { name: 'Cheddar Cheese', color: '#FDE18B' },
         { name: 'Swiss Cheese', color: '#F1E1A8' },
     ];
+
+    // initialize new useState variable called stack
+    // starting with an empty array so that we can add ingredients from availableIngredients to the stack
+    const [stack, setStack] = useState([]);
 
     return (
         <main>

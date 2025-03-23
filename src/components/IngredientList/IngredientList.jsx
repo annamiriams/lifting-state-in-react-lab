@@ -7,7 +7,7 @@ const IngredientList = (props) => {
             <h3>Available Ingredients</h3>
             <ul>
                 {props.availableIngredients.map((ingredient, index) => (
-                    <li key={index}> 
+                    <li key={index} style={{ backgroundColor: ingredient.color }}> 
                         {ingredient.name}
                     </li>
                 ))}

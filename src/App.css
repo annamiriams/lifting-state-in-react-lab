@@ -36,15 +36,20 @@ main {
 }
 
 section {
-    width: 80%;
+    width: 60%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+div {
+    padding: 30px;
 }
 
 h1 {
     text-align: center;
 }
+
 
 ul {
     width: 100%;

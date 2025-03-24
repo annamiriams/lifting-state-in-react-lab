@@ -3,7 +3,7 @@
 const BurgerStack = (props) => {
     return (
         <div>
-            <h3>Your Burger</h3>
+            <h1>Your Burger</h1>
             <ul>
                 {props.stack.map((ingredient, index) => (
                     <li key={index} style={{ backgroundColor: ingredient.color }}>

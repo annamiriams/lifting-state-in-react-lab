@@ -8,7 +8,7 @@ const BurgerStack = (props) => {
                 {props.stack.map((ingredient, index) => (
                     <li key={index} style={{ backgroundColor: ingredient.color }}>
                         {ingredient.name}
-                        <button onClick={() => props.handleRemoveFromBurger(ingredient)}>x</button>
+                        <button onClick={() => props.handleRemoveFromBurger(index)}>x</button>
                     </li>
                 ))}
             </ul>

@@ -38,13 +38,26 @@ const App = () => {
     };
 
     // handleRemoveFromBurger function
-    const handleRemoveFromBurger = (removedIngredient) => {
-        console.log(removedIngredient);
-        // this is working to remove an ing from stack, but it's not letting you readd the ing from the avail ings
-        // fixed when i added state variable for ing list and set it below
-        const updatedBurgerStack = stack.filter(ingredient => ingredient.name !== removedIngredient.name);
+    // const handleRemoveFromBurger = (removedIngredient) => {
+    //     console.log(removedIngredient);
+    //     // this is working to remove an ing from stack, but it's not letting you readd the ing from the avail ings
+    //     // fixed when i added state variable for ing list and set it below
+    //     const updatedBurgerStack = stack.filter(ingredient => ingredient.name !== removedIngredient.name);
+    //     setStack(updatedBurgerStack);
+    //     setIngredientsList(ingredientsList);
+    // };
+
+    // passing index parameter here and in BurgerStack.jsx
+    const handleRemoveFromBurger = (index) => {
+        // create a new array called updatedBurgerStack (filter)
+        // filter()'s callback function determines which ingredients pass the test and therefore remain in the updatedBurgerStack variable
+        // syntax: array.filter(callback(element, index, array) => { return condition });
+        // i'm just using (element, index) in the callback function. element = ing; index = i
+        // i = index of the current ing in the array
+        // index = index that was passed into the handleRemoveFromBurger function
+        // if i === index (if the current ing in the array's i === the index of the ing passed to the function), remove the ing from the new array that we'll call updatedBurgerStack
+        const updatedBurgerStack = stack.filter((ingredient, i) => i !== index);
         setStack(updatedBurgerStack);
-        setIngredientsList(ingredientsList);
     };
 
     return (
